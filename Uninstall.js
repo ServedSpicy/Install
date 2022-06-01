@@ -8,5 +8,7 @@ const { log } = console;
 const { remove } = Deno;
 
 
-await remove(folder,{ recursive : true });
-await remove(desktop_entry);
+export default async function(){
+    await remove(folder,{ recursive : true });
+    await remove(desktop_entry);
+}

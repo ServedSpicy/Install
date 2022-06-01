@@ -11,4 +11,7 @@ const { log } = console;
 // log(entry);
 
 
-await writeTextFile(desktop_entry,entry);
+export default async function(){
+    await writeTextFile(desktop_entry,entry);    
+}
+
