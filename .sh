@@ -51,4 +51,4 @@ unzip           \
 
 rm $Download
 
-mv $Folder/Dummy/ $Folder/Configurator/
+mv $Folder/Dummy/ $Folder/App/
