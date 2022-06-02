@@ -18,7 +18,7 @@ export const folder =
     join(home,'.ServedSpicy');
 
 export const app_icon =
-    join(folder,'App','Icons','App.svg');
+    join(folder,'App','Icons','App.png');
     
 export const app_launcher =
     join(folder,'App','Client.sh');
