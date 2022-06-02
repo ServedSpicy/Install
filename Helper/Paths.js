@@ -9,7 +9,7 @@ const home = env.get('HOME');
 
 
 export const desktop_entry = 
-    join('usr','share','applications','ServedSpicy.desktop');
+    join('/','usr','share','applications','ServedSpicy.desktop');
 
 export const config = 
     join(home,'.cache','ServedSpicy');
