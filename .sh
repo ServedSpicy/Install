@@ -48,7 +48,8 @@ sudo $deno run                  \
     --allow-env=$variables      \
     --importmap=$imports        \
     --unstable                  \
-    $installer
+    $installer                  \
+    --home=$HOME
 
 
 # 
