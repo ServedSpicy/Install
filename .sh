@@ -17,11 +17,15 @@ if [ $1 = "debug" ]; then
     echo "Debug Mode Enabled"
     
     current="$(dirname -- $(readlink -fn -- "$0"; echo x))/"
+    
     installer="${current}/../Installer/Source/App.js"
     imports="${current}/../Installer/Source/Imports.json"
+    
 else
-    installer="https://raw.githubusercontent.com/ServedSpicy/Installer/main/Source/App.js"
-    imports="https://raw.githubusercontent.com/ServedSpicy/Installer/main/Source/Imports.json"
+    
+    installer="https://raw.githubusercontent.com/ServedSpicy/Installer/0.0.1/Source/App.js"
+    imports="https://raw.githubusercontent.com/ServedSpicy/Installer/0.0.1/Source/Imports.json"
+
 fi
 
 
