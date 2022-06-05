@@ -27,7 +27,7 @@ fi
 
 deno=$(which deno)
 
-desktop_entry="/usr/share/applications/ServedSpicy.desktop"
+desktop_entry="$HOME/.local/share/applications/ServedSpicy.desktop"
 folder="$HOME/.ServedSpicy"
 config="$HOME/.config/ServedSpicy"
 temp="/tmp"
