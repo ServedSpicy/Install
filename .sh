@@ -38,6 +38,10 @@ commands="dpkg-query,apt,curl,unzip"
 variables="HOME"
 
 
+user=$(id -u $USER)
+group=$(id -g $USER)
+
+
 sudo $deno run                  \
     --allow-write=$writable     \
     --allow-read=$readable      \
@@ -46,4 +50,6 @@ sudo $deno run                  \
     --allow-run=$commands       \
     --unstable                  \
     $installer                  \
-    --home=$HOME
+    --home=$HOME                \
+    --user=$user                \
+    --group=$group
