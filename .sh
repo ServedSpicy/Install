@@ -2,18 +2,12 @@
 
 clear
 
+
 # Ensure Deno
 
 if ! type "deno" > /dev/null; then
     curl -fsSL https://deno.land/install.sh | sh > /dev/null
 fi
-
-
-# # Ensure LibSerial
-# 
-# if [ "" = "$(dpkg-query -W --showformat='${Status}\n' libserial1|grep "install ok installed")" ]; then
-#     sudo apt --yes install libserial1
-# fi
 
 
 # Use the local installer in debug mode.
@@ -36,9 +30,11 @@ deno=$(which deno)
 desktop_entry="/usr/share/applications/ServedSpicy.desktop"
 folder="$HOME/.ServedSpicy"
 config="$HOME/.config/ServedSpicy"
+temp="/tmp"
 
-writable="${desktop_entry},${folder},${config}"
-readable="${folder},${config}"
+writable="${desktop_entry},${folder},${config},${temp}"
+readable="${folder},${config},${temp}"
+commands="dpkg-query,apt,curl,unzip"
 variables="HOME"
 
 
@@ -47,62 +43,7 @@ sudo $deno run                  \
     --allow-read=$readable      \
     --allow-env=$variables      \
     --importmap=$imports        \
+    --allow-run=$commands       \
     --unstable                  \
     $installer                  \
     --home=$HOME
-
-
-# 
-# 
-# Release="https://github.com/ServedSpicy/Bundle/releases/download/Dummy/Dummy.zip"
-# Folder="$HOME/.ServedSpicy"
-# Download="${Folder}/Download.zip"
-# Applications="$HOME/.local/share/applications"
-# DesktopEntry="${Applications}/ServedSpicy-Configurator.desktop"
-# 
-# 
-# # Install Deno
-# 
-# echo "Installing Deno"
-# 
-# 
-# 
-# 
-# # Install Serial Library
-# 
-# echo "Installing Serial Library"
-# 
-# sudo apt install libserial1
-# 
-# 
-# # Setting Up Files
-# 
-# rm              \
-#     --recursive \
-#     $Folder
-# 
-# mkdir $Folder
-# 
-# 
-# # Download Release
-# 
-# echo "Downloading Latest Release"
-# 
-# curl                    \
-#     --output $Download  \
-#     -LJO                \
-#     $Release
-# 
-# 
-# # Extract Archive
-# 
-# unzip           \
-#     -d $Folder  \
-#     $Download
-# 
-# 
-# # Cleanup
-# 
-# rm $Download
-# 
-# mv $Folder/Dummy/ $Folder/App/
