@@ -29,8 +29,8 @@ if [ $1 = "debug" ]; then
     
 else
     
-    installer="https://raw.githubusercontent.com/ServedSpicy/Installer/0.3.1/Source/App.js"
-    imports="https://raw.githubusercontent.com/ServedSpicy/Installer/0.3.1/Source/Imports.json"
+    installer="https://raw.githubusercontent.com/ServedSpicy/Installer/0.3.2/Source/App.js"
+    imports="https://raw.githubusercontent.com/ServedSpicy/Installer/0.3.2/Source/Imports.json"
 
 fi
 
