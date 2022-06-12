@@ -6,7 +6,13 @@ clear
 # Ensure Deno
 
 if ! type "deno" > /dev/null; then
+    
     curl -fsSL https://deno.land/install.sh | sh > /dev/null
+    
+    echo 'export DENO_INSTALL="/$HOME/.deno"' >> $HOME/.bashrc
+    echo 'export PATH="$DENO_INSTALL/bin:$PATH"' >> $HOME/.bashrc
+    
+    exec bash
 fi
 
 
