@@ -63,7 +63,7 @@ temp="/tmp"
 
 writable="${desktop_entry},${folder},${config},${temp}"
 readable="${folder},${config},${temp}"
-commands="dpkg-query,apt,curl,unzip,groups,usermod"
+commands="dpkg-query,apt,curl,unzip,groups,usermod,groupadd"
 variables="HOME"
 
 
