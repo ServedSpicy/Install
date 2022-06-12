@@ -1,22 +1,38 @@
 #!/usr/bin/env sh
 
+
+
+deno="$HOME/.deno/bin/deno"
+
+
+
 clear
+
+
+
+# Set Title
+
+export PROMPT_COMMAND='echo -ne "\033]30;ServedSpicy Installer\007"'
+
 
 
 # Ensure Deno
 
-if ! type "deno" > /dev/null; then
+#if ! type "deno" > /dev/null; then
+
+
+if [ -e $deno ]; then
+    
+    echo "Deno is already installed"
+
+else    
     
     curl -fsSL https://deno.land/install.sh | sh > /dev/null
     
     echo 'export DENO_INSTALL="/$HOME/.deno"' >> $HOME/.bashrc
     echo 'export PATH="$DENO_INSTALL/bin:$PATH"' >> $HOME/.bashrc
     
-    source ~/.bashrc
-else
-    
-    echo "Deno is already installed"
-    
+    # source ~/.bashrc
 fi
 
 
@@ -39,7 +55,6 @@ else
 fi
 
 
-deno="$HOME/.deno/bin/deno"
 
 desktop_entry="$HOME/.local/share/applications/ServedSpicy.desktop"
 folder="$HOME/.ServedSpicy"
