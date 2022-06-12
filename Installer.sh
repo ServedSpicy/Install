@@ -2,6 +2,7 @@
 
 
 
+version="0.4.0"
 deno="$HOME/.deno/bin/deno"
 
 
@@ -49,8 +50,8 @@ if [ $1 = "debug" ]; then
     
 else
     
-    installer="https://raw.githubusercontent.com/ServedSpicy/Installer/0.3.2/Source/App.js"
-    imports="https://raw.githubusercontent.com/ServedSpicy/Installer/0.3.2/Source/Imports.json"
+    installer="https://raw.githubusercontent.com/ServedSpicy/Installer/${version}/Source/App.js"
+    imports="https://raw.githubusercontent.com/ServedSpicy/Installer/${version}/Source/Imports.json"
 
 fi
 
