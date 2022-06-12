@@ -29,8 +29,8 @@ if [ $1 = "debug" ]; then
     
 else
     
-    installer="https://raw.githubusercontent.com/ServedSpicy/Installer/0.0.1/Source/App.js"
-    imports="https://raw.githubusercontent.com/ServedSpicy/Installer/0.0.1/Source/Imports.json"
+    installer="https://raw.githubusercontent.com/ServedSpicy/Installer/0.2.0/Source/App.js"
+    imports="https://raw.githubusercontent.com/ServedSpicy/Installer/0.2.0/Source/Imports.json"
 
 fi
 
@@ -44,7 +44,7 @@ temp="/tmp"
 
 writable="${desktop_entry},${folder},${config},${temp}"
 readable="${folder},${config},${temp}"
-commands="dpkg-query,apt,curl,unzip"
+commands="dpkg-query,apt,curl,unzip,groups,usermod"
 variables="HOME"
 
 
