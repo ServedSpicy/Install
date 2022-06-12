@@ -35,7 +35,7 @@ else
 fi
 
 
-deno=$(which deno)
+deno="$HOME/.deno/bin/deno"
 
 desktop_entry="$HOME/.local/share/applications/ServedSpicy.desktop"
 folder="$HOME/.ServedSpicy"
@@ -51,6 +51,7 @@ variables="HOME"
 user=$(id -u $USER)
 group=$(id -g $USER)
 
+clear
 
 sudo $deno run                  \
     --allow-write=$writable     \
