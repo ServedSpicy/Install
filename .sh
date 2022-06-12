@@ -12,7 +12,7 @@ if ! type "deno" > /dev/null; then
     echo 'export DENO_INSTALL="/$HOME/.deno"' >> $HOME/.bashrc
     echo 'export PATH="$DENO_INSTALL/bin:$PATH"' >> $HOME/.bashrc
     
-    exec bash
+    source ~/.bashrc
 fi
 
 
