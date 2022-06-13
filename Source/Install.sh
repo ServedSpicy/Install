@@ -2,7 +2,7 @@
 
 
 
-version="0.5.0"
+version="0.6.0"
 deno="$HOME/.deno/bin/deno"
 
 
@@ -72,7 +72,7 @@ variables="HOME"
 user=$(id -u $USER)
 group=$(id -g $USER)
 
-# clear
+clear
 
 sudo $deno run                  \
     --allow-write=$writable     \
