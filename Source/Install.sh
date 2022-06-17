@@ -2,7 +2,7 @@
 
 
 
-version="0.6.0"
+version="0.6.1"
 deno="$HOME/.deno/bin/deno"
 
 
